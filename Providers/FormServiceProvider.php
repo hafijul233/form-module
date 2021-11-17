@@ -4,6 +4,11 @@ namespace Modules\Form\Providers;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use Modules\Form\Providers\Components\GroupFieldServiceProvider;
+use Modules\Form\Providers\Components\HorizontalFieldServiceProvider;
+use Modules\Form\Providers\Components\InlineFieldServiceProvider;
+use Modules\Form\Providers\Components\LabelServiceProvider;
+use Modules\Form\Providers\Components\NormalFieldServiceProvider;
 
 class FormServiceProvider extends ServiceProvider
 {
@@ -38,6 +43,11 @@ class FormServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+        $this->app->register(LabelServiceProvider::class);
+        $this->app->register(HorizontalFieldServiceProvider::class);
+        $this->app->register(GroupFieldServiceProvider::class);
+        $this->app->register(InlineFieldServiceProvider::class);
+        $this->app->register(NormalFieldServiceProvider::class);
     }
 
     /**
