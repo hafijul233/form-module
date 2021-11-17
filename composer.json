@@ -1,0 +1,63 @@
+{
+    "name": "hafijul233/form-module",
+    "type" : "laravel-module",
+    "description": "",
+    "support": {
+        "issues": "https://github.com/hafijul233/form-module/issues",
+        "wiki": "https://github.com/hafijul233/form-module/wiki",
+        "source": "https://github.com/hafijul233/form-module",
+        "docs": "http://hafijulislam.me/projects/form-module"
+    },
+    "keywords": [
+        "framework",
+        "laravel",
+        "boilerplate",
+        "modules",
+        "form"
+    ],
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "Hafijul Islam",
+            "email": "hafijul233@gmail.com",
+            "homepage": "http://www.hafijulislam.me",
+            "role": "Maintainer"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "nwidart/laravel-modules": "^8.2",
+        "joshbrw/laravel-module-installer": "^2.0",
+        "laravelcollective/html": "^6.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Form\\Providers\\FormServiceProvider"
+            ],
+            "aliases": {
+                "Form": "Collective\\Html\\FormFacade",
+                "Html" : "Collective\\Html\\HtmlFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Form\\": ""
+        },
+        "exclude-from-classmap": [
+            "**/Tests/*",
+            "**/test/*",
+            "**/tests/*"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Form\\Tests\\": "Tests/"
+        }
+    }
+}

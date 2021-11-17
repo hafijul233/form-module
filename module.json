@@ -1,0 +1,21 @@
+{
+    "name": "Form",
+    "alias": "form",
+    "description": "Bootstrap style form components support bootstrap 3, 4, 5",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Form\\Providers\\FormServiceProvider",
+        "Collective\\Html\\HtmlServiceProvider"
+    ],
+    "aliases": {
+        "Form": "Collective\\Html\\FormFacade",
+        "Html" : "Collective\\Html\\HtmlFacade"
+    },
+    "files": [],
+    "requires": [],
+    "minimumCoreVersion": "",
+    "title": "Bootstrap Form Component",
+    "version": "1.0.0",
+    "author": "Hafijul Islam"
+}
