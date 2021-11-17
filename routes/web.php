@@ -13,7 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::prefix('form')->group(function() {
-    Route::get('/', 'FormController@index');
-});
+Route::view('/form/examples', 'form::examples.bootstrap4');
