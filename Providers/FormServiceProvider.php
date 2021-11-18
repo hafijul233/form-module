@@ -58,10 +58,10 @@ class FormServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            module_path($this->moduleName, 'config/config.php') => config_path($this->moduleNameLower . '.php'),
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            module_path($this->moduleName, 'config/config.php'), $this->moduleNameLower
+            module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
         );
     }
 
@@ -73,7 +73,7 @@ class FormServiceProvider extends ServiceProvider
     public function registerViews()
     {
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(),
-            [module_path($this->moduleName, 'resources/views')]
+            [module_path($this->moduleName, 'Resources/views')]
         ), $this->moduleNameLower);
     }
 
@@ -89,7 +89,7 @@ class FormServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
         } else {
-            $this->loadTranslationsFrom(module_path($this->moduleName, 'resources/lang'), $this->moduleNameLower);
+            $this->loadTranslationsFrom(module_path($this->moduleName, 'Resources/lang'), $this->moduleNameLower);
         }
     }
 
@@ -126,10 +126,7 @@ class FormServiceProvider extends ServiceProvider
      */
     public function registerPublicAssets()
     {
-        $this->publishes([module_path($this->moduleName, 'resources/assets') => public_path('modules/' . $this->moduleNameLower . '/assets'),
+        $this->publishes([module_path($this->moduleName, 'Resources/assets') => public_path('modules/' . $this->moduleNameLower . '/assets'),
         ], $this->moduleNameLower . '-assets');
-
-        $this->publishes([module_path($this->moduleName, 'resources/plugins') => public_path('modules/' . $this->moduleNameLower . '/plugins'),
-        ], $this->moduleNameLower . '-plugins');
     }
 }

@@ -30,8 +30,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "nwidart/laravel-modules": "^8.2",
-        "joshbrw/laravel-module-installer": "^2.0",
         "laravelcollective/html": "^6.2"
     },
     "extra": {
