@@ -27,6 +27,6 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         Route::middleware('web')
-            ->group(module_path('Form', '/routes/web.php'));
+            ->group(module_path('Form', '/Routes/web.php'));
     }
 }
